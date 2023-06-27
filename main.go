@@ -57,6 +57,7 @@ func main() {
 	// f, err := loadCalcPlugin(pluginName)
 	err := loadCalcPlugin2(pluginName)
 	if err != nil {
+		err = xerrors.Errorf("Error loading plugin: %v", err)
 		fmt.Printf("get error: %+v\n", err)
 		return
 	}

@@ -4,7 +4,7 @@ PLUGINS_SO=$(patsubst %.go,%.so,$(PLUGINS_SRC))
 
 all: main $(PLUGINS_SO)
 
-main:
+main: main.go
 	go build -o main ./main.go
 
 $(PLUGINS_SO): $(PLUGINS_SRC)
